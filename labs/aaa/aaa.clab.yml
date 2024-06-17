@@ -1,0 +1,19 @@
+name: aaa
+
+mgmt:
+  network: aaa-mgmt
+  ipv4-subnet: 172.21.21.0/24
+
+topology:
+  nodes:
+    tac_plus-ng:
+      kind: linux
+      image: stimmerman/tac_plus-ng:latest
+      mgmt-ipv4: 172.21.21.10
+      binds:
+        - tac_plus-ng.cfg:/usr/local/etc/tac_plus-ng.cfg
+    rtr1:
+      kind: ceos
+      image: ceos:4.31.2F
+      mgmt-ipv4: 172.21.21.11
+      startup-config: rtr1.cfg
