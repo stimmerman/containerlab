@@ -1,0 +1,8 @@
+name: 1p-ssh
+
+topology:
+  nodes:
+    ceos:
+      kind: ceos
+      image: ceos:4.31.2F
+      startup-config: eos.cfg

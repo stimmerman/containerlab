@@ -1,0 +1,3 @@
+# Ignore containerlab artifacts
+labs/*/clab-*
+.*.clab.yml.bak
